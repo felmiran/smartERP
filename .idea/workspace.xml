@@ -2,75 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8919500-8cdd-49dd-9618-5d3bd5ef0031" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/admin.py" afterPath="$PROJECT_DIR$/clients/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/admin.py" afterPath="$PROJECT_DIR$/inventory/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/management/admin.py" afterPath="$PROJECT_DIR$/management/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment/admin.py" afterPath="$PROJECT_DIR$/payment/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchases/admin.py" afterPath="$PROJECT_DIR$/purchases/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quotations/admin.py" afterPath="$PROJECT_DIR$/quotations/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/admin.py" afterPath="$PROJECT_DIR$/sales/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sellers/admin.py" afterPath="$PROJECT_DIR$/sellers/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suppliers/admin.py" afterPath="$PROJECT_DIR$/suppliers/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/apps.py" afterPath="$PROJECT_DIR$/clients/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/apps.py" afterPath="$PROJECT_DIR$/inventory/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/management/apps.py" afterPath="$PROJECT_DIR$/management/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment/apps.py" afterPath="$PROJECT_DIR$/payment/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchases/apps.py" afterPath="$PROJECT_DIR$/purchases/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quotations/apps.py" afterPath="$PROJECT_DIR$/quotations/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/apps.py" afterPath="$PROJECT_DIR$/sales/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sellers/apps.py" afterPath="$PROJECT_DIR$/sellers/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suppliers/apps.py" afterPath="$PROJECT_DIR$/suppliers/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/models.py" afterPath="$PROJECT_DIR$/clients/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/models.py" afterPath="$PROJECT_DIR$/inventory/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/management/models.py" afterPath="$PROJECT_DIR$/management/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment/models.py" afterPath="$PROJECT_DIR$/payment/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchases/models.py" afterPath="$PROJECT_DIR$/purchases/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quotations/models.py" afterPath="$PROJECT_DIR$/quotations/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/models.py" afterPath="$PROJECT_DIR$/sales/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sellers/models.py" afterPath="$PROJECT_DIR$/sellers/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suppliers/models.py" afterPath="$PROJECT_DIR$/suppliers/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartERP/settings.py" afterPath="$PROJECT_DIR$/smartERP/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/smartERP.iml" afterPath="$PROJECT_DIR$/.idea/smartERP.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartERP/urls.py" afterPath="$PROJECT_DIR$/smartERP/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smartERP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,21 +52,62 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="smartERP" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quotations/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quotations/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14509246" vertical-offset="0" max-vertical-offset="703">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/clients/admin.py" />
+        <option value="$PROJECT_DIR$/quotations/apps.py" />
+        <option value="$PROJECT_DIR$/smartERP/settings.py" />
+        <option value="$PROJECT_DIR$/quotations/models.py" />
+        <option value="$PROJECT_DIR$/sales/models.py" />
+        <option value="$PROJECT_DIR$/quotations/admin.py" />
+      </list>
+    </option>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="784" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1552" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -128,6 +132,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,22 +161,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="payment" />
+              <option name="myItemId" value="quotations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/venvs/smartERP/Scripts/python.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
   </component>
   <component name="RunManager" selected="Django server.smartERP">
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -225,6 +235,9 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f8919500-8cdd-49dd-9618-5d3bd5ef0031" name="Default" comment="" />
@@ -235,27 +248,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="20" width="1400" height="784" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22526042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -277,7 +290,221 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Desktop/smartERP/clients/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/smartERP/clients/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14697406" vertical-offset="0" max-vertical-offset="694">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/smartERP/clients/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/smartERP/cotizations/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14977974" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/smartERP/cotizations/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17146975" vertical-offset="0" max-vertical-offset="694">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartERP/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quotations/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#25#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartERP/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27744806" vertical-offset="357" max-vertical-offset="2431">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2159">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/management/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09672831" vertical-offset="0" max-vertical-offset="765">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payment/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0042674253" vertical-offset="3" max-vertical-offset="2159">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchases/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70128024" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sellers/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suppliers/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quotations/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quotations/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14509246" vertical-offset="0" max-vertical-offset="703">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
