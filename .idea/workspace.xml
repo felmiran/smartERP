@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8919500-8cdd-49dd-9618-5d3bd5ef0031" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/management/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchases/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quotations/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sales/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sellers/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/suppliers/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartERP/wsgi.py" />
+    </list>
+    <ignored path="smartERP.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="smartERP" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="68" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RunManager" selected="Django server.smartERP">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartERP" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="smartERP" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartERP" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Django server.smartERP" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8919500-8cdd-49dd-9618-5d3bd5ef0031" name="Default" comment="" />
+      <created>1478832230784</created>
+      <option name="number" value="Default" />
+      <updated>1478832230784</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="68" y="20" width="1400" height="784" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
