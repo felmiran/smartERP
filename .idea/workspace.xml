@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8919500-8cdd-49dd-9618-5d3bd5ef0031" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/admin.py" afterPath="$PROJECT_DIR$/clients/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/admin.py" afterPath="$PROJECT_DIR$/inventory/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/management/admin.py" afterPath="$PROJECT_DIR$/management/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment/admin.py" afterPath="$PROJECT_DIR$/payment/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchases/admin.py" afterPath="$PROJECT_DIR$/purchases/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quotations/admin.py" afterPath="$PROJECT_DIR$/quotations/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/admin.py" afterPath="$PROJECT_DIR$/sales/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sellers/admin.py" afterPath="$PROJECT_DIR$/sellers/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suppliers/admin.py" afterPath="$PROJECT_DIR$/suppliers/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/apps.py" afterPath="$PROJECT_DIR$/clients/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/apps.py" afterPath="$PROJECT_DIR$/inventory/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/management/apps.py" afterPath="$PROJECT_DIR$/management/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment/apps.py" afterPath="$PROJECT_DIR$/payment/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchases/apps.py" afterPath="$PROJECT_DIR$/purchases/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quotations/apps.py" afterPath="$PROJECT_DIR$/quotations/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/apps.py" afterPath="$PROJECT_DIR$/sales/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sellers/apps.py" afterPath="$PROJECT_DIR$/sellers/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suppliers/apps.py" afterPath="$PROJECT_DIR$/suppliers/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/models.py" afterPath="$PROJECT_DIR$/clients/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/models.py" afterPath="$PROJECT_DIR$/inventory/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/management/models.py" afterPath="$PROJECT_DIR$/management/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment/models.py" afterPath="$PROJECT_DIR$/payment/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchases/models.py" afterPath="$PROJECT_DIR$/purchases/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quotations/models.py" afterPath="$PROJECT_DIR$/quotations/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/models.py" afterPath="$PROJECT_DIR$/sales/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sellers/models.py" afterPath="$PROJECT_DIR$/sellers/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suppliers/models.py" afterPath="$PROJECT_DIR$/suppliers/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartERP/settings.py" afterPath="$PROJECT_DIR$/smartERP/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/smartERP.iml" afterPath="$PROJECT_DIR$/.idea/smartERP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartERP/urls.py" afterPath="$PROJECT_DIR$/smartERP/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f8919500-8cdd-49dd-9618-5d3bd5ef0031" name="Default" comment="" />
     <ignored path="smartERP.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
