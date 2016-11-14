@@ -2,17 +2,19 @@ from django.shortcuts import render
 from django.db.models import Q
 from rest_framework import generics
 from rest_framework.filters import SearchFilter
-from .serializers import ClientSerializer, ClientContactSerializer
+from .serializers import ClientListSerializer, ClientDetailSerializer, ClientContactSerializer
 from .models import Client, ClientContact
 
 
 class ClientView(generics.ListCreateAPIView):
     queryset = Client.objects.all()
-    serializer_class = ClientSerializer
+    serializer_class = ClientListSerializer
+    # default de rest_framework para agregar filtro al query
     filter_backends = [SearchFilter]
     search_fields = ['client_rut', 'client_name', 'client_giro']
-    # override default queryset para que permita hacer filtros. usando los filtros
-    # de rest framework no es necesario
+    # override default queryset para que permita hacer filtros. (usando los filtros
+    # de rest framework no es necesario, por eso esta commented)
+
     # def get_queryset(self, *args, **kwargs):
     #     queryset_list = Client.objects.all()
     #     query = self.request.GET.get("q")
@@ -25,11 +27,9 @@ class ClientView(generics.ListCreateAPIView):
     #     return queryset_list
 
 
-
-
 class ClientDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Client.objects.all()
-    serializer_class = ClientSerializer
+    serializer_class = ClientDetailSerializer
 
 
 class ClientContactView(generics.ListCreateAPIView):
