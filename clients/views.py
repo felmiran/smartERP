@@ -1,22 +1,36 @@
-from django.shortcuts import render
 from rest_framework import generics
-from rest_framework.filters import SearchFilter
 from .serializers import ClientListSerializer, ClientDetailSerializer, ClientContactSerializer
 from .models import Client, ClientContact
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
+from django.shortcuts import get_object_or_404, redirect
+from django.db.models import Q
 
-class ClientView(generics.ListCreateAPIView):
-    # queryset = Client.objects.all()
+
+class ClientDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Client.objects.all()
+    serializer_class = ClientDetailSerializer
+    renderer_classes = [TemplateHTMLRenderer]
+    template_name = 'clientdetail.html'
+
+    def get(self, request, pk):
+        client = get_object_or_404(Client, pk=pk)
+        serializer = ClientDetailSerializer(client)
+        return Response({'serializer': serializer, 'client': client})
+
+    def post(self, request, pk):
+        client = get_object_or_404(Client, pk=pk)
+        serializer = ClientListSerializer(client, data=request.data)
+        if not serializer.is_valid():
+            return Response({'serializer': serializer, 'client': client})
+        serializer.save()
+        return redirect('clients:clients')
+
+
+class ClientView(generics.ListAPIView):
     serializer_class = ClientListSerializer
-    # default de rest_framework para agregar filtro al query
-    filter_backends = [SearchFilter]
-    search_fields = ['client_rut', 'client_name', 'client_giro']
-
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'clients.html'
-    # override default queryset para que permita hacer filtros. (usando los filtros
-    # de rest framework no es necesario, por eso esta commented)
 
     def get_queryset(self, *args, **kwargs):
         queryset_list = Client.objects.all()
@@ -29,15 +43,9 @@ class ClientView(generics.ListCreateAPIView):
                     ).distinct()
         return queryset_list
 
-
     def get(self, request):
         queryset = Client.objects.all()
         return Response({'clients': queryset})
-
-
-class ClientDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Client.objects.all()
-    serializer_class = ClientDetailSerializer
 
 
 class ClientContactView(generics.ListCreateAPIView):

@@ -11,11 +11,7 @@ class ClientListSerializer(ModelSerializer):
     )
     class Meta:
         model = Client
-        fields = (
-            'url',
-            'client_rut',
-            'client_name'
-        )
+        fields = '__all__'
 
 
 class ClientDetailSerializer(ModelSerializer):
