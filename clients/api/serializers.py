@@ -2,7 +2,7 @@ from rest_framework.serializers import (
     ModelSerializer,
     HyperlinkedIdentityField,
 )
-from .models import Client, ClientContact
+from clients.models import Client, ClientContact
 
 
 class ClientListSerializer(ModelSerializer):
@@ -20,9 +20,16 @@ class ClientDetailSerializer(ModelSerializer):
         fields = '__all__'
 
 
-class ClientContactSerializer(ModelSerializer):
-    client = ClientListSerializer()
+class ClientContactListSerializer(ModelSerializer):
+    # client = ClientListSerializer()
+    url = HyperlinkedIdentityField(
+        view_name='clients:clientcontactdetail',
+    )
+    class Meta:
+        model = ClientContact
+        fields = '__all__'
 
+class ClientContactDetailSerializer(ModelSerializer):
     class Meta:
         model = ClientContact
         fields = '__all__'

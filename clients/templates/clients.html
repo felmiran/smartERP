@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html><body>
-<h1>Clients</h1>
-<ul>
-    {% for client in clients %}
-    <li><a href="{% url 'clients:clientdetail' client.id %}">{{ client.client_rut }} - {{ client.client_name }}</a></li>
-    {% endfor %}
-</ul>
-</body></html>

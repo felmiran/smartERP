@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html"><body>
+<h1>Clients</h1>
+<ul>
+    {% for client in clients %}
+    <li><a href="{% url 'clients:clientdetail' pk=client.pk %}">{{ client.client_rut }} - {{ client.client_name }}</a></li>
+    {% endfor %}
+</ul>
+
+<form action="{% url 'clients:clientcreate' %} ">
+    <input type="submit" value="Crear Cliente" />
+</form>
+
+</body></html>
