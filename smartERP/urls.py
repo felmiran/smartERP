@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from .views import IndexView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'clients/', include('clients.api.urls', namespace='clients'))
+    url(r'clients/', include('clients.urls', namespace='clients')),
+    url(r'^$', IndexView.as_view(), name='index')
 ]
