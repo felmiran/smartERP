@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chaset="UTF-8">
+    <title>{% block title %}smartERP{% endblock %}</title>
+<!-- {% load staticfiles %} -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header pull-left glyphicon-object-align-vertical">
+            <a class="navbar-brand" href={% url 'index' %}>smartERP</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <a class="btn btn-default" data-toggle="modal" href="#myModal" >Login</a>
+        </ul>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">x</button>
+                        <h3>Bienvenido a smartERP</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action='' name="login_form">
+                            <p><input type="text" class="span3" name="eid" id="email" placeholder="Email"></p>
+                                <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+                                <p><button type="submit" class="btn btn-primary">Sign in</button><br>
+                                  <a href="#">Forgot Password?</a>
+                                </p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        Not registered yet?
+                        <a href="#" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#topNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                       <li><a href="#">Action</a></li>
+                       <li><a href="#">Another action</a></li>
+                       <li><a href="#">Something else here</a></li>
+                       <li class="divider"></li>
+                       <li class="nav-header">Nav header</li>
+                       <li><a href="#">Separated link</a></li>
+                       <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+
+
+
+
+
+
+
+
+
+<h3 align="center">smartERP</h3>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
