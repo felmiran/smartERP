@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bienvenido a smartERP</title>
+    <title>smartERP</title>
 
 
     {% load static %}
@@ -173,7 +173,7 @@
                                 <a href="#ventas-clientes" data-toggle="collapse"> <em>Clientes</em><i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="ventas-clientes" class="collapse">
                                     <li><a href="#">Crear nuevo cliente</a></li>
-                                    <li><a href="#">Clientes</a></li>
+                                    <li><a href="{% url 'clients:client_list' %} ">Clientes</a></li>
                                 </ul>
                                 <a href="#ventas-cot" data-toggle="collapse"> <em>Cotizaciones</em><i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="ventas-cot" class="collapse">
@@ -283,8 +283,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-muted">
-                            Blank Page
-                            <small class="text-muted">Subheading</small>
+                            {% block title %}{% endblock %}
                         </h1>
                         <ol class="breadcrumb">
                             <li>
