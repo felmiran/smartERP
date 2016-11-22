@@ -32,14 +32,14 @@ class CreateClient(CreateView):
 class UpdateClient(UpdateView):
     model = Client
     form_class = ClientForm
-    fields = '__all__'
+    # fields = '__all__'
     template_name_suffix = '_update_form'
 
 
 class DeleteClient(DeleteView):
     model = Client
     form_class = ClientForm
-    fields = '__all__'
+    # fields = '__all__'
     template_name_suffix = '_delete_form'
 
 
@@ -65,19 +65,19 @@ class ClientContactDetailView(DetailView):
 class CreateClientContact(CreateView):
     model = ClientContact
     form_class = ClientContactForm
-    fields = '__all__'
+    # fields = '__all__'
     template_name_suffix = '_create_form'
 
 
 class UpdateClientContact(UpdateView):
     model = ClientContact
     form_class = ClientContactForm
-    fields = '__all__'
+    # fields = '__all__'
     template_name_suffix = '_update_form'
 
 
 class DeleteClientContact(DeleteView):
     model = ClientContact
     form_class = ClientContactForm
-    fields = '__all__'
+    # fields = '__all__'
     template_name_suffix = '_delete_form'

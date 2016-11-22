@@ -18,14 +18,15 @@
             {% for client in object_list %}
                 <tr>
                     <td>
-                        <input type="checkbox">
+                        <a href="{% url 'clients:client-update' client.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                        <a href="#"><i class="fa fa-times-circle" title="Eliminar"></i></a>
                     </td>
                     <td>{{ client.client_rut }}</td>
                     <td>{{ client.client_name }}</td>
                     <td>{{ client.client_comuna }}</td>
                     <td>{{ client.client_tel }}</td>
                     <td>
-                        <a href="" class="btn btn-default">Ver Contactos</a>
+                        <a href="" class="btn btn-default btn-sm">Ver Contactos</a>
                     </td>
                 </tr>
 
