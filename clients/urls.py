@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^client_contacts/(?P<pk>[0-9]+)/$', views.ClientContactDetailView.as_view(), name='contact_detail'),
     url(r'^add/$', views.CreateClient.as_view(), name='client-add'),
     url(r'^(?P<pk>[0-9]+)/update/$', views.UpdateClient.as_view(), name='client-update'),
+    url(r'^(?P<pk>[0-9]+)/delete/$', views.DeleteClient.as_view(), name='client-delete'),
 
 
 

@@ -8,10 +8,9 @@
         {% include 'form-template.html' %}
         <div class="form-group">
             <div>
+{#                formnovalidate es para que no aplique la validacion por defecto del browser. igual aplica la validacion custom#}
                 <button type="submit" class="btn btn-success" formnovalidate>Crear Cliente</button>
             </div>
-
         </div>
     </form>
-
 {% endblock %}

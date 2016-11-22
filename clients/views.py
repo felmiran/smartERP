@@ -40,7 +40,8 @@ class DeleteClient(DeleteView):
     model = Client
     form_class = ClientForm
     # fields = '__all__'
-    template_name_suffix = '_delete_form'
+    # template_name_suffix = '_delete_form'
+    success_url = reverse_lazy('clients:client_list')
 
 
 # ----------contactos------------

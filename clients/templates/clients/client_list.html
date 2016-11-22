@@ -19,7 +19,7 @@
                 <tr>
                     <td>
                         <a href="{% url 'clients:client-update' client.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
-                        <a href="#"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                        <a href="{% url 'clients:client-delete' client.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
                     </td>
                     <td>{{ client.client_rut }}</td>
                     <td>{{ client.client_name }}</td>

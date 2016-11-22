@@ -26,7 +26,7 @@ class Client(models.Model):
 
 
 class ClientContact(models.Model):
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, on_delete=models.PROTECT)
     contact_name = models.CharField(max_length=250)
     contact_role = models.CharField(max_length=200, blank=True)
     contact_tel = models.CharField(max_length=20, blank=True)
