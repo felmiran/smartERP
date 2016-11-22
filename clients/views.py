@@ -1,6 +1,8 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, ClientContact
+from .forms import ClientForm, ClientContactForm
+from django.core.urlresolvers import reverse_lazy
 
 # ----------clientes------------
 class ClientListView(ListView):
@@ -12,6 +14,7 @@ class ClientListView(ListView):
 
 class ClientDetailView(DetailView):
     model = Client
+    form_class = ClientForm
     template_name = 'clients/client_detail.html'
     def get_context_data(self, **kwargs):
         context = super(ClientDetailView, self).get_context_data(**kwargs)
@@ -21,18 +24,21 @@ class ClientDetailView(DetailView):
 
 class CreateClient(CreateView):
     model = Client
-    fields = '__all__'
+    form_class = ClientForm
+    # fields = '__all__'
     template_name_suffix = '_create_form'
 
 
 class UpdateClient(UpdateView):
     model = Client
+    form_class = ClientForm
     fields = '__all__'
     template_name_suffix = '_update_form'
 
 
 class DeleteClient(DeleteView):
     model = Client
+    form_class = ClientForm
     fields = '__all__'
     template_name_suffix = '_delete_form'
 
@@ -47,6 +53,7 @@ class ClientContactListView(ListView):
 
 class ClientContactDetailView(DetailView):
     model = ClientContact
+    form_class = ClientContactForm
     template_name = 'clients/contact_detail.html'
     def get_context_data(self, **kwargs):
         context = super(ClientContactDetailView, self).get_context_data(**kwargs)
@@ -57,17 +64,20 @@ class ClientContactDetailView(DetailView):
 
 class CreateClientContact(CreateView):
     model = ClientContact
+    form_class = ClientContactForm
     fields = '__all__'
     template_name_suffix = '_create_form'
 
 
 class UpdateClientContact(UpdateView):
     model = ClientContact
+    form_class = ClientContactForm
     fields = '__all__'
     template_name_suffix = '_update_form'
 
 
 class DeleteClientContact(DeleteView):
     model = ClientContact
+    form_class = ClientContactForm
     fields = '__all__'
     template_name_suffix = '_delete_form'
