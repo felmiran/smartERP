@@ -3,4 +3,42 @@
 <h2>{% block title %}Listado de Clientes{% endblock %}</h2>
 
 {% block body %}
+
+    <table>
+        <tr>
+            <th></th>
+            <th>RUT Cliente</th>
+            <th>Nombre Cliente</th>
+            <th>Comuna</th>
+            <th>Telefono</th>
+            <th>Contactos</th>
+        </tr>
+
+            {% if object_list %}
+            {% for client in object_list %}
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>{{ client.client_rut }}</td>
+                    <td>{{ client.client_name }}</td>
+                    <td>{{ client.client_comuna }}</td>
+                    <td>{{ client.client_tel }}</td>
+                    <td>
+                        <a href="" class="btn btn-default">Ver Contactos</a>
+                    </td>
+                </tr>
+
+            {% endfor %}
+            {% else %}
+                <h3>No hay clientes registrados</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'clients:client-add' %}" class="btn btn-success">Crear Cliente</a>
+    <br>
+    <br>
+
+
 {% endblock %}

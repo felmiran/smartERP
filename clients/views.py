@@ -2,7 +2,7 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, ClientContact
 
-
+# ----------clientes------------
 class ClientListView(ListView):
     template_name = 'clients/client_list.html'
 
@@ -19,6 +19,25 @@ class ClientDetailView(DetailView):
         return context
 
 
+class CreateClient(CreateView):
+    model = Client
+    fields = '__all__'
+    template_name_suffix = '_create_form'
+
+
+class UpdateClient(UpdateView):
+    model = Client
+    fields = '__all__'
+    template_name_suffix = '_update_form'
+
+
+class DeleteClient(DeleteView):
+    model = Client
+    fields = '__all__'
+    template_name_suffix = '_delete_form'
+
+
+# ----------contactos------------
 class ClientContactListView(ListView):
     template_name = 'clients/contact_list.html'
     
@@ -36,11 +55,19 @@ class ClientContactDetailView(DetailView):
         return context
 
 
-class CreateClient(CreateView):
-    model = Client
-    fields = '__all__'
-
-
 class CreateClientContact(CreateView):
     model = ClientContact
     fields = '__all__'
+    template_name_suffix = '_create_form'
+
+
+class UpdateClientContact(UpdateView):
+    model = ClientContact
+    fields = '__all__'
+    template_name_suffix = '_update_form'
+
+
+class DeleteClientContact(DeleteView):
+    model = ClientContact
+    fields = '__all__'
+    template_name_suffix = '_delete_form'

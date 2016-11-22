@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Client(models.Model):
@@ -17,6 +17,9 @@ class Client(models.Model):
 
     class Meta:
         ordering = ['client_rut']
+
+    def get_absolute_url(self):
+        return reverse('clients:client_list')
 
     def __str__(self):
         return self.client_rut + ' - ' + self.client_name

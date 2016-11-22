@@ -12,18 +12,46 @@
     <title>smartERP</title>
 
 
-    {% load static %}
+    {% load staticfiles %}
 
     <!-- Bootstrap Core CSS -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-    <link href="../static/css/sb-admin.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/static/css/sb-admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://127.0.0.1:8000/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 5px;
+        font-size: 130%;
+        color: #122b40;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
 
 
+    form label{
+        color: #122b40;
+        font-size: 100%;
+    }
+
+
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +76,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">smartERP</a>
+                <a class="navbar-brand" href="/">smartERP</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -172,7 +200,7 @@
                             <li>
                                 <a href="#ventas-clientes" data-toggle="collapse"> <em>Clientes</em><i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="ventas-clientes" class="collapse">
-                                    <li><a href="#">Crear nuevo cliente</a></li>
+                                    <li><a href="{% url 'clients:client-add' %}">Crear cliente</a></li>
                                     <li><a href="{% url 'clients:client_list' %} ">Clientes</a></li>
                                 </ul>
                                 <a href="#ventas-cot" data-toggle="collapse"> <em>Cotizaciones</em><i class="fa fa-fw fa-caret-down"></i></a>
@@ -294,8 +322,12 @@
                             </li>
                         </ol>
                     </div>
+
                 </div>
                 <!-- /.row -->
+
+                {% block body %}
+                {% endblock %}
 
             </div>
             <!-- /.container-fluid -->
@@ -307,10 +339,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../static/js/jquery.js"></script>
+    <script src="http://127.0.0.1:8000/static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="http://127.0.0.1:8000/static/js/bootstrap.min.js"></script>
 
     <!---login modal --->
     <div class="modal fade" id="myModal">
