@@ -25,22 +25,22 @@ class ClientDetailView(DetailView):
 class CreateClient(CreateView):
     model = Client
     form_class = ClientForm
-    # fields = '__all__'
+    # fields = '__all__'  <<------ no aplica porque ya esta incluido en el clientform
     template_name_suffix = '_create_form'
 
 
 class UpdateClient(UpdateView):
     model = Client
     form_class = ClientForm
-    # fields = '__all__'
+    # fields = '__all__'  <<------ no aplica porque ya esta incluido en el clientform
     template_name_suffix = '_update_form'
 
 
 class DeleteClient(DeleteView):
     model = Client
     form_class = ClientForm
-    # fields = '__all__'
-    # template_name_suffix = '_delete_form'
+    # fields = '__all__' <<------ no aplica porque ya esta incluido en el clientform
+    # template_name_suffix = '_confirm_delete' <<------por defecto
     success_url = reverse_lazy('clients:client_list')
 
 
