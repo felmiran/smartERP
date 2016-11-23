@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, ClientContact
 from .forms import ClientForm, ClientContactForm
 from django.core.urlresolvers import reverse_lazy
+from django.shortcuts import get_object_or_404
 
 # ----------clientes------------
 class ClientListView(ListView):
@@ -48,8 +49,15 @@ class DeleteClient(DeleteView):
 class ClientContactListView(ListView):
     template_name = 'clients/contact_list.html'
     
-    def get_queryset(self, pk):
-        return Client.objects.filter(pk=pk)
+    def get_queryset(self):
+        self.client = get_object_or_404(Client, pk=self.kwargs['pk'])
+        return ClientContact.objects.filter(client=self.client)
+    
+    def get_context_data(self, **kwargs):
+        context = super(ClientContactListView, self).get_context_data(**kwargs)
+        context["client"] = Client.objects.get(pk=self.kwargs['pk'])
+        return context
+        
 
 
 class ClientContactDetailView(DetailView):

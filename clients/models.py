@@ -15,11 +15,11 @@ class Client(models.Model):
     client_email = models.EmailField(blank=True, verbose_name="E-mail")
     is_active = models.BooleanField(default=True, verbose_name="Activo")
 
-    class Meta:
-        ordering = ['client_rut']
-
     def get_absolute_url(self):
         return reverse('clients:client_list')
+
+    class Meta:
+        ordering = ['client_rut']
 
     def __str__(self):
         return self.client_rut + ' - ' + self.client_name
@@ -32,8 +32,11 @@ class ClientContact(models.Model):
     contact_tel = models.CharField(max_length=20, blank=True)
     contact_email = models.EmailField(blank=True)
 
-    def __str__(self):
-        return self.contact_name
+    def get_absolute_url(self):
+        return reverse('clients:client_list')
 
     class Meta:
         ordering = ['contact_name']
+
+    def __str__(self):
+        return self.contact_name

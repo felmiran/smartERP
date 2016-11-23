@@ -24,7 +24,6 @@ class ClientContactForm(forms.ModelForm):
         model = ClientContact
         fields = '__all__'
         widgets = {
-            'client': forms.TextInput(attrs={'class': 'form control', 'size': '40'}),
             'contact_name': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
             'contact_role': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
             'contact_tel': forms.TextInput(attrs={'class': 'form control', 'size': '15'}),

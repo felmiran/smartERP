@@ -5,32 +5,32 @@
 {% block body %}
 
     <table>
-        <tr>
-            <th></th>
-            <th>RUT Cliente</th>
-            <th>Nombre Cliente</th>
-            <th>Comuna</th>
-            <th>Telefono</th>
-            <th>Contactos</th>
-        </tr>
-
             {% if object_list %}
-            {% for client in object_list %}
                 <tr>
-                    <td>
-                        <a href="{% url 'clients:client-update' client.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
-                        <a href="{% url 'clients:client-delete' client.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
-                    </td>
-                    <td>{{ client.client_rut }}</td>
-                    <td>{{ client.client_name }}</td>
-                    <td>{{ client.client_comuna }}</td>
-                    <td>{{ client.client_tel }}</td>
-                    <td>
-                        <a href="" class="btn btn-default btn-sm">Ver Contactos</a>
-                    </td>
+                    <th></th>
+                    <th>RUT Cliente</th>
+                    <th>Nombre Cliente</th>
+                    <th>Comuna</th>
+                    <th>Telefono</th>
+                    <th>Contactos</th>
                 </tr>
 
-            {% endfor %}
+                    {% for client in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'clients:client-update' client.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'clients:client-delete' client.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ client.client_rut }}</td>
+                            <td>{{ client.client_name }}</td>
+                            <td>{{ client.client_comuna }}</td>
+                            <td>{{ client.client_tel }}</td>
+                            <td>
+                                <a href="{% url 'clients:contact_list' client.pk %}" class="btn btn-default btn-sm">Contactos</a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
             {% else %}
                 <h3>No hay clientes registrados</h3>
             {% endif %}

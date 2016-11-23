@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Contactos: {{ client.client_rut }} - {{ client.client_name }}{% endblock %}</h2>
+
+{% block body %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Nombre Cliente</th>
+                    <th>Cargo</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                </tr>
+
+                    {% for contact in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'clients:contact-update' contact.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'clients:contact-delete' contact.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ contact.contact_name }}</td>
+                            <td>{{ contact.contact_role }}</td>{# no es el nombre#}
+                            <td>{{ contact.contact_tel }}</td>
+                            <td>{{ contact.contact_email }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay contactos registrados</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'clients:contact-add' %}" class="btn btn-success">Crear Contacto</a>
+    <br>
+    <br>
+
+
+{% endblock %}
