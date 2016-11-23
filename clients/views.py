@@ -47,7 +47,7 @@ class DeleteClient(DeleteView):
 
 # ----------contactos------------
 class ClientContactListView(ListView):
-    template_name = 'clients/contact_list.html'
+    template_name = 'clients/clientcontact_list.html'
     
     def get_queryset(self):
         self.client = get_object_or_404(Client, pk=self.kwargs['pk'])
