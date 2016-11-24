@@ -89,4 +89,5 @@ class DeleteClientContact(DeleteView):
     model = ClientContact
     form_class = ClientContactForm
     # fields = '__all__'
-    template_name_suffix = '_delete_form'
+    # template_name_suffix = '_confirm_delete' <<------por defecto
+    success_url = reverse_lazy('clients:client_list')
