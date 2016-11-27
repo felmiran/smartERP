@@ -7,7 +7,7 @@ class ClientForm(forms.ModelForm):
         model = Client
         fields = '__all__'
         widgets = {
-            'client_rut': forms.TextInput(attrs={'class': 'form control', 'size': '15'}),
+            'client_rut': forms.TextInput(attrs={'class': 'form control', 'size': '15', 'readonly': 'True'}),
             'client_name': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
             'client_giro': forms.TextInput(attrs={'class': 'form control', 'size': '70'}),
             'client_address': forms.TextInput(attrs={'class': 'form control', 'size': '70'}),
