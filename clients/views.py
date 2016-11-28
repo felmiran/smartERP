@@ -6,6 +6,10 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
+from django.db.models.deletion import ProtectedError
+from django.shortcuts import redirect
+from django.utils.html import mark_safe
+
 
 # ----------clientes------------
 class ClientListView(ListView):
@@ -19,6 +23,7 @@ class ClientDetailView(DetailView):
     model = Client
     form_class = ClientForm
     template_name = 'clients/client_detail.html'
+
     def get_context_data(self, **kwargs):
         context = super(ClientDetailView, self).get_context_data(**kwargs)
         context["client"] = Client.objects.get(pk=self.kwargs['pk'])
@@ -47,10 +52,20 @@ class DeleteClient(DeleteView):
     # template_name_suffix = '_confirm_delete' <<------por defecto
     success_url = reverse_lazy('clients:client_list')
     success_message = "El cliente ha sido eliminado con exito"
+    error_message = "No es posible eliminar al cliente. Esto puede deberse a que: " \
+                    "\n - El cliente tiene contactos asociados" \
+                    "\n - El cliente tiene cotizaciones asociadas" \
+                    "\n - El cliente tiene ventas asociadas"
 
     def delete(self, request, *args, **kwargs):
-        messages.success(self.request, self.success_message)
-        return super(DeleteClient, self).delete(request, *args, **kwargs)
+        try:
+            a = super(DeleteClient, self).delete(request, *args, **kwargs)
+            messages.success(self.request, mark_safe(self.success_message))
+            return a
+
+        except ProtectedError:
+            messages.error(self.request, self.error_message)
+            return redirect('clients:client_list')
 
 
 # ----------contactos------------
