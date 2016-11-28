@@ -3,15 +3,5 @@
 <h2>{% block title %}Editar Contacto: {{ object.contact_name }}{% endblock %}</h2>
 
 {% block body %}
-    <form class="form-horizonral" action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% include 'form-template.html' %}
-        <div class="form-group">
-            <div>
-                <button type="submit" class="btn btn-success" formnovalidate>Guardar</button>
-            </div>
-
-        </div>
-    </form>
-
+{% include 'update_form.html' %}
 {% endblock %}

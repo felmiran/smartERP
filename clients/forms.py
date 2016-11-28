@@ -44,3 +44,19 @@ class ClientContactForm(forms.ModelForm):
             'contact_tel': forms.TextInput(attrs={'class': 'form control', 'size': '15'}),
             'contact_email': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
         }
+
+class ClientContactUpdateForm(forms.ModelForm):
+    class Meta:
+        model = ClientContact
+        fields = [
+            'contact_name',
+            'contact_role',
+            'contact_tel',
+            'contact_email',
+        ]
+        widgets = {
+            'contact_name': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
+            'contact_role': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
+            'contact_tel': forms.TextInput(attrs={'class': 'form control', 'size': '15'}),
+            'contact_email': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
+        }

@@ -1,7 +1,7 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, ClientContact
-from .forms import ClientForm, ClientUpdateForm, ClientContactForm
+from .forms import ClientForm, ClientUpdateForm, ClientContactForm, ClientContactUpdateForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.contrib.messages.views import SuccessMessageMixin
@@ -99,11 +99,12 @@ class CreateClientContact(CreateView):
     form_class = ClientContactForm
     # fields = '__all__'
     template_name_suffix = '_create_form'
+    success_message = 'El contacto ha sido creado con exito'
 
 
 class UpdateClientContact(UpdateView):
     model = ClientContact
-    form_class = ClientContactForm
+    form_class = ClientContactUpdateForm
     # fields = '__all__'
     template_name_suffix = '_update_form'
 
