@@ -4,21 +4,23 @@
 
 {% block body %}
 
-    {% if messages %}
-        <div class="row">
-            <div class="col-xs-12">
+{#    {% if messages %}#}
+{#        <div class="row">#}
+{#            <div class="col-xs-12">#}
+{##}
+{#                {% for message in messages %}#}
+{#                    <p{% if message.tags == 'success'%} class="alert alert-dismissible alert-success" {% elif message.tags == 'error' %} class="alert alert-dismissible alert-danger" {% endif %}>#}
+{#                        <button type="button" class="close" data-dismiss="alert">&times;</button>#}
+{#                        <i {% if message.tags == 'success'%} class="fa fa-check" {% elif message.tags == 'error' %} class='fa fa-times' {% endif %} aria-hidden="true">&nbsp;</i>#}
+{#                        {{ message|linebreaksbr }}#}
+{#                    </p>#}
+{#                {% endfor %}#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    {% endif %}#}
 
-                {% for message in messages %}
-                    <p{% if message.tags == 'success'%} class="alert alert-dismissible alert-success" {% elif message.tags == 'error' %} class="alert alert-dismissible alert-danger" {% endif %}>
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <i {% if message.tags == 'success'%} class="fa fa-check" {% elif message.tags == 'error' %} class='fa fa-times' {% endif %} aria-hidden="true">&nbsp;</i>
-                        {{ message|linebreaksbr }}
-                    </p>
-                {% endfor %}
-
-            </div>
-        </div>
-    {% endif %}
+    {% include 'form-message.html' %}
 
     <table>
             {% if object_list %}

@@ -114,3 +114,8 @@ class DeleteClientContact(DeleteView):
     # fields = '__all__'
     # template_name_suffix = '_confirm_delete' <<------por defecto
     success_url = reverse_lazy('clients:client_list')
+    success_message = "El contacto ha sido eliminado con exito"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, mark_safe(self.success_message))
+        return super(DeleteClientContact, self).delete(request, *args, **kwargs)

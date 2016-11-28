@@ -12,7 +12,7 @@ from inventory.models import Product
 
 # Create your models here.
 class Sale(models.Model):
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, on_delete=models.PROTECT)
     seller = models.ForeignKey(Seller, on_delete=models.PROTECT,
                                limit_choices_to={'is_active': True})
     warehouse = models.ForeignKey(Warehouse, on_delete=models.PROTECT,
