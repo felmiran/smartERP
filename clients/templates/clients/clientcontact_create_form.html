@@ -3,14 +3,5 @@
 <h2>{% block title %}Nuevo Contacto{% endblock %}</h2>
 
 {% block body %}
-    <form class="form-horizonral" action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% include 'form-template.html' %}
-        <div class="form-group">
-            <div>
-{#                formnovalidate es para que no aplique la validacion por defecto del browser. igual aplica la validacion custom#}
-                <button type="submit" class="btn btn-success" formnovalidate>Crear Cliente</button>
-            </div>
-        </div>
-    </form>
+{%  include 'create_form.html' %}
 {% endblock %}
