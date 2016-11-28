@@ -1,9 +1,11 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, ClientContact
-from .forms import ClientForm, ClientContactForm
+from .forms import ClientForm, ClientCreateForm, ClientContactForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 
 # ----------clientes------------
 class ClientListView(ListView):
@@ -23,16 +25,17 @@ class ClientDetailView(DetailView):
         return context
 
 
-class CreateClient(CreateView):
+class CreateClient(SuccessMessageMixin, CreateView):
     model = Client
     form_class = ClientForm
     # fields = '__all__'  <<------ no aplica porque ya esta incluido en el clientform
     template_name_suffix = '_create_form'
+    success_message = "El cliente ha sido creado con exito"
 
 
 class UpdateClient(UpdateView):
     model = Client
-    form_class = ClientForm
+    form_class = ClientCreateForm
     # fields = '__all__'  <<------ no aplica porque ya esta incluido en el clientform
     template_name_suffix = '_update_form'
 
@@ -43,6 +46,11 @@ class DeleteClient(DeleteView):
     # fields = '__all__' <<------ no aplica porque ya esta incluido en el clientform
     # template_name_suffix = '_confirm_delete' <<------por defecto
     success_url = reverse_lazy('clients:client_list')
+    success_message = "El cliente ha sido eliminado con exito"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeleteClient, self).delete(request, *args, **kwargs)
 
 
 # ----------contactos------------
