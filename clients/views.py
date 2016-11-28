@@ -1,7 +1,7 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, ClientContact
-from .forms import ClientForm, ClientCreateForm, ClientContactForm
+from .forms import ClientForm, ClientUpdateForm, ClientContactForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.contrib.messages.views import SuccessMessageMixin
@@ -40,7 +40,7 @@ class CreateClient(SuccessMessageMixin, CreateView):
 
 class UpdateClient(UpdateView):
     model = Client
-    form_class = ClientCreateForm
+    form_class = ClientUpdateForm
     # fields = '__all__'  <<------ no aplica porque ya esta incluido en el clientform
     template_name_suffix = '_update_form'
 

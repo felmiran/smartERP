@@ -18,7 +18,7 @@ class ClientForm(forms.ModelForm):
             'client_email': forms.TextInput(attrs={'class': 'form control', 'size': '30'}),
         }
 
-class ClientCreateForm(forms.ModelForm):
+class ClientUpdateForm(forms.ModelForm):
     class Meta:
         model = Client
         fields = '__all__'

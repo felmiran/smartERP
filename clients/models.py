@@ -9,24 +9,19 @@ def rut_validate(value):
 
     if len(value) == 10 and value.index('-') == 8 and value.count('-') == 1:
         rut = value
-
     elif len(value) == 9 and value.index('-') == 7 and value.count('-') == 1:
         rut = '0' + value
-
     else:
         raise ValidationError('Por favor ingrese el rut sin puntos y con guion. Ej. 11111111-1')
-
     spl_rut = rut.rsplit('-')
     if spl_rut[1] in ('k', 'K'):
         spl_rut.pop()
         spl_rut = spl_rut + ['10']
-
     elif spl_rut[1] == '0':
         spl_rut.pop()
         spl_rut = spl_rut + ['11']
 
     rut1 = list(map(int, spl_rut[0]))
-
     suma = 0
     for i in range(len(spl_rut[0])):
         suma = suma + rut1[-(i+1)]*validador[i]
