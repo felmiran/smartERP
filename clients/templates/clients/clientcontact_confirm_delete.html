@@ -1,13 +1,1 @@
-<div class="modal hide" id="DeleteModal" >
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <form action="" method="post">{% csrf_token %}
-                    <p>Are you sure you want to delete contact "{{ object }}"?</p>
-                    <button type="submit" class="btn btn-success">Aceptar</button>
-                </form>
-                <a href="{% url 'clients:client_list' %}" class="btn btn-warning">Cancelar</a>
-            </div>
-        </div>
-    </div>
-</div>
+{% include 'delete_form.html' %}
