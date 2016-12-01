@@ -21,10 +21,11 @@ class Warehouse(models.Model):
         return self.warehouse_code + ' - ' + self.warehouse_name
 
     class Meta:
-        ordering = ['warehouse_name']
+        ordering = ['warehouse_code']
 
 
 class Branch(models.Model):
+    branch_code = models.CharField(max_length=10, verbose_name='Codigo Sucursal', unique='True')
     branch_name = models.CharField(max_length=45)
     branch_address = models.CharField(max_length=100, blank=True)
     branch_comuna = models.CharField(max_length=50, blank=True)
@@ -33,8 +34,11 @@ class Branch(models.Model):
     branch_tel = models.CharField(max_length=50, blank=True)
     is_active = models.BooleanField(default=True)
 
+    # def get_absolute_url(self):
+    #     return reverse('management:branch_list')
+
     def __str__(self):
-        return self.branch_name
+        return self.warehouse_code + ' - ' + self.branch_name
 
     class Meta:
-        ordering = ['branch_name']
+        ordering = ['branch_code']

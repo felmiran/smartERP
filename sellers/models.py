@@ -22,7 +22,7 @@ class Seller(models.Model):
         return self.seller_code + ' - ' + self.seller_name
 
     class Meta:
-        ordering = ['seller_name']
+        ordering = ['seller_code']
 
 
 

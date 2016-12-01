@@ -11,6 +11,10 @@ urlpatterns = [
     url(r'^warehouse/(?P<pk>[0-9]+)/delete/$', views.DeleteWarehouse.as_view(), name='warehouse-delete'),
 
     #branch
+    url(r'^branch/$', views.BranchListView.as_view(), name='branch_list'),
+    url(r'^branch/add/$', views.CreateBranch.as_view(), name='branch-add'),
+    url(r'^branch/(?P<pk>[0-9]+)/update/$', views.UpdateBranch.as_view(), name='branch-update'),
+    url(r'^branch/(?P<pk>[0-9]+)/delete/$', views.DeleteBranch.as_view(), name='branch-delete')
 
 
 
