@@ -19,10 +19,8 @@
                     {% for seller in object_list %}
                         <tr>
                             <td>
-                                <a href="#"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
-{#                                <a href="{% url 'clients:client-update' client.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;#}
-                                <a href="#"><i class="fa fa-times-circle" title="Eliminar"></i></a>
-{#                                <a href="{% url 'clients:client-delete' client.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>#}
+                                <a href="{% url 'sellers:seller-update' seller.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'sellers:seller-delete' seller.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
                             </td>
                             <td>{{ seller.seller_code }}</td>
                             <td>{{ seller.seller_name }}</td>

@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Seller(models.Model):
-    seller_code = models.CharField(max_length=10, verbose_name="Codigo Vendedor")
+    seller_code = models.CharField(max_length=10, verbose_name="Codigo Vendedor", unique="True")
     seller_name = models.CharField(max_length=50, verbose_name="Nombre Vendedor")
     seller_address = models.CharField(max_length=100, blank=True, verbose_name="Direccion")
     seller_comuna = models.CharField(max_length=50, blank=True, verbose_name="Comuna")
@@ -19,7 +19,7 @@ class Seller(models.Model):
         return reverse("sellers:seller_list")
 
     def __str__(self):
-        return self.pk + ' - ' + self.seller_name
+        return self.seller_code + ' - ' + self.seller_name
 
     class Meta:
         ordering = ['seller_name']
