@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+<h2>{% block title %}Vendedores{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Vendedor</th>
+                    <th>Nombre Vendedor</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                </tr>
+
+                    {% for seller in object_list %}
+                        <tr>
+                            <td>
+                                <a href="#"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+{#                                <a href="{% url 'clients:client-update' client.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;#}
+                                <a href="#"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+{#                                <a href="{% url 'clients:client-delete' client.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>#}
+                            </td>
+                            <td>{{ seller.seller_code }}</td>
+                            <td>{{ seller.seller_name }}</td>
+                            <td>{{ seller.seller_tel }}</td>
+                            <td>{{ seller.seller_email }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay vendedores registrados</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'sellers:seller-add' %}" class="btn btn-success">Crear Vendedor</a>
+    <br>
+    <br>
+
+{% endblock %}

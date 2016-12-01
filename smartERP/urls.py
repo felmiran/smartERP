@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'clients/', include('clients.urls', namespace='clients')),
+    url(r'sellers/', include('sellers.urls', namespace='sellers')),
     url(r'^$', IndexView.as_view(), name='index')
 ]
