@@ -75,7 +75,7 @@ class UpdateBranch(UpdateView):
 class DeleteBranch(DeleteView):
     model = Branch
     form_class = BranchForm
-    success_url = reverse_lazy('management:warehouse_list')
+    success_url = reverse_lazy('management:branch_list')
     success_message = "La sucursal ha sido eliminada con exito"
     error_message = "No es posible eliminar la sucursal. Esto puede deberse a que: " \
                     "\n - La sucursal tiene ventas asociadas" \

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+<h2>{% block title %}Editar Sucursal: {{ object.branch_code }} - {{ object.branch_name }}{% endblock %}</h2>
+
+{% block body %}
+{% include 'update_form.html' %}
+{% endblock %}

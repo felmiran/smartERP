@@ -34,11 +34,11 @@ class Branch(models.Model):
     branch_tel = models.CharField(max_length=50, blank=True)
     is_active = models.BooleanField(default=True)
 
-    # def get_absolute_url(self):
-    #     return reverse('management:branch_list')
+    def get_absolute_url(self):
+        return reverse('management:branch_list')
 
     def __str__(self):
-        return self.warehouse_code + ' - ' + self.branch_name
+        return self.branch_code + ' - ' + self.branch_name
 
     class Meta:
         ordering = ['branch_code']

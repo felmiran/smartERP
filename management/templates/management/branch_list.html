@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+<h2>{% block title %}Sucursales{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Sucursal</th>
+                    <th>Nombre Sucursal</th>
+                    <th>Direccion</th>
+                    <th>Comuna</th>
+                    <th>Telefono</th>
+                </tr>
+
+                    {% for branch in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'management:branch-update' branch.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'management:branch-delete' branch.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ branch.branch_code }}</td>
+                            <td>{{ branch.branch_name }}</td>
+                            <td>{{ branch.branch_address }}</td>
+                            <td>{{ branch.branch_comuna }}</td>
+                            <td>{{ branch.branch_tel }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay sucursales registradas</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'management:branch-add' %}" class="btn btn-success">Crear sucursal</a>
+    <br>
+    <br>
+
+{% endblock %}
