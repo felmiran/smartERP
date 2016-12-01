@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Bodegas{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Bodega</th>
+                    <th>Nombre Bodega</th>
+                    <th>Direccion</th>
+                    <th>Comuna</th>
+                    <th>Telefono</th>
+                </tr>
+
+                    {% for warehouse in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'management:warehouse-update' warehouse.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'management:warehouse-delete' warehouse.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ warehouse.warehouse_code }}</td>
+                            <td>{{ warehouse.warehouse_name }}</td>
+                            <td>{{ warehouse.warehouse_address }}</td>
+                            <td>{{ warehouse.warehouse_comuna }}</td>
+                            <td>{{ warehouse.watehouse_tel }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay bodegas registradas</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'management:warehouse-add' %}" class="btn btn-success">Crear bodega</a>
+    <br>
+    <br>
+
+{% endblock %}
