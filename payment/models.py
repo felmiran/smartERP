@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.urlresolvers import reverse
 
 
 # Create your models here.
@@ -35,6 +34,9 @@ class Payform(models.Model):
     payform_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
     payform_name = models.CharField(max_length=30, verbose_name='Codigo Forma de Pago')
     is_active = models.BooleanField(default=True, verbose_name='Activo')
+
+    def get_absolute_url(self):
+        return reverse('payment:payform_list')
 
     def __str__(self):
         return self.payform_code + ' - ' + self.payform_name
