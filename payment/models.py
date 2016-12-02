@@ -32,80 +32,91 @@ DOCS_SII = (
 
 
 class Payform(models.Model):
-    payform_name = models.CharField(max_length=11, unique=True)
-    is_active = models.BooleanField(default=True)
+    payform_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
+    payform_name = models.CharField(max_length=30, verbose_name='Codigo Forma de Pago')
+    is_active = models.BooleanField(default=True, verbose_name='Activo')
 
     def __str__(self):
-        return self.payform_name
+        return self.payform_code + ' - ' + self.payform_name
 
     class Meta:
-        ordering = ['payform_name']
+        ordering = ['payform_code']
 
 
 class CreditCondition(models.Model):
-    cond_name = models.CharField(max_length=50, unique=True)
-    cond_days = models.PositiveSmallIntegerField(validators=[MaxValueValidator(365), MinValueValidator(0)])
-    cond_cuotas = models.PositiveSmallIntegerField(validators=[MaxValueValidator(100), MinValueValidator(1)])
-    is_active = models.BooleanField(default=True)
+    cond_code = models.CharField(max_length=10, verbose_name='Codigo', unique="True")
+    cond_name = models.CharField(max_length=50, verbose_name='Nombre Condicion de Pago')
+    cond_days = models.PositiveSmallIntegerField(validators=[MaxValueValidator(365), MinValueValidator(0)], verbose_name='Dias')
+    cond_cuotas = models.PositiveSmallIntegerField(validators=[MaxValueValidator(100), MinValueValidator(1)],
+                                                   verbose_name='Cuotas')
+    is_active = models.BooleanField(default=True, verbose_name='Activo')
 
     def __str__(self):
-        return self.cond_name
+        return self.cond_code + ' - ' + self.cond_name
 
     class Meta:
-        ordering = ['cond_name']
+        ordering = ['cond_code']
 
 
 class InventoryMovementType(models.Model):
-    movement_type_name = models.CharField(max_length=50)
-    positive = models.BooleanField(default=True)  # if positive, it adds to product supply. It subtracts otherwise
-    is_active = models.BooleanField(default=True)
+    OPERATION = (
+        (0, 'Disminuye Inventario'),
+        (1, 'Aumenta Inventario'),
+    )
+    movement_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
+    movement_name = models.CharField(max_length=50, verbose_name='Nombre Tipo de Movimiento')
+    operation = models.PositiveSmallIntegerField(choices=OPERATION, verbose_name='Operacion')  # if 1, it adds to product supply. It subtracts if 0.
+    is_active = models.BooleanField(default=True, verbose_name='Activo')
 
     def __str__(self):
-        return self.warehouse_name
+        return self.movement_code + ' - ' + self.movement_name
 
     class Meta:
-        ordering = ['movement_type_name']
+        ordering = ['movement_code']
 
 
 class SaleDocType(models.Model):
-    doc_name = models.CharField(max_length=50)
-    doc_abbr = models.CharField(max_length=10)
-    sii_code = models.PositiveSmallIntegerField(choices=DOCS_SII)
-    is_active = models.BooleanField(default=True)
-    inv_movement_type = models.ForeignKey(InventoryMovementType, on_delete=models.CASCADE)
+    sdoc_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
+    sdoc_name = models.CharField(max_length=50, verbose_name='Nombre Documento de Venta')
+    ssii_code = models.PositiveSmallIntegerField(choices=DOCS_SII, verbose_name='Codigo SII')
+    is_active = models.BooleanField(default=True, verbose_name='Activo')
+    inv_movement_type = models.ForeignKey(InventoryMovementType, on_delete=models.CASCADE,
+                                          verbose_name='Tipo de Movimiento')
 
     def __str__(self):
-        return self.doc_abbr + ' - ' + self.doc_name
+        return self.sdoc_code + ' - ' + self.sdoc_name
 
     class Meta:
-        ordering = ['doc_abbr']
+        ordering = ['sdoc_code']
 
 
 class PurchaseDocType(models.Model):
-    doc_name = models.CharField(max_length=50)
-    doc_abbr = models.CharField(max_length=10)
-    sii_code = models.PositiveSmallIntegerField(choices=DOCS_SII)
-    is_active = models.BooleanField(default=True)
-    inv_movement_type = models.ForeignKey(InventoryMovementType, on_delete=models.CASCADE)
+    pdoc_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
+    pdoc_name = models.CharField(max_length=50, verbose_name='Nombre Documento de Compra')
+    psii_code = models.PositiveSmallIntegerField(choices=DOCS_SII, verbose_name='Codigo SII')
+    is_active = models.BooleanField(default=True, verbose_name='Activo')
+    inv_movement_type = models.ForeignKey(InventoryMovementType, on_delete=models.CASCADE,
+                                          verbose_name='Tipo de Movimiento')
 
     def __str__(self):
-        return self.doc_abbr + ' - ' + self.doc_name
+        return self.pdoc_code + ' - ' + self.pdoc_name
 
     class Meta:
-        ordering = ['doc_abbr']
+        ordering = ['pdoc_code']
 
 
 class Tax(models.Model):
-    tax_name = models.CharField(max_length=30)
-    DEC_VALIDATORS = [MaxValueValidator(1, message="Por favor ingrese un numero entre 0 y 1"),
-                      MinValueValidator(0, message="Por favor ingrese un numero entre 0 y 1")]
-    tax_value = models.DecimalField(max_digits=2, decimal_places=2, validators=DEC_VALIDATORS)
+    tax_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
+    tax_name = models.CharField(max_length=30, verbose_name='Nombre Impuesto')
+    DEC_VALIDATORS = [MaxValueValidator(100, message="Por favor ingrese un numero entre 0 y 100"),
+                      MinValueValidator(0, message="Por favor ingrese un numero entre 0 y 100")]
+    tax_value = models.PositiveSmallIntegerField(validators=DEC_VALIDATORS, verbose_name='Monto')
 
     def __str__(self):
-        return self.tax_name
+        return self.tax_code + ' - ' + self.tax_name
 
     class Meta:
-        ordering = ['tax_name']
+        ordering = ['tax_code']
 
 
 
