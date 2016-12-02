@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+<h2>{% block title %}Formas de Pago{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Forma de Pago</th>
+                    <th>Nombre Forma de Pago</th>
+                </tr>
+
+                    {% for payform in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'payment:payform-update' payform.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'payment:payform-delete' payform.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ payform.payform_code }}</td>
+                            <td>{{ payform.payform_name }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay formas de pago registradas</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'payment:payform-add' %}" class="btn btn-success">Crear forma de pago</a>
+    <br>
+    <br>
+
+{% endblock %}

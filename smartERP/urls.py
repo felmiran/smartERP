@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'clients/', include('clients.urls', namespace='clients')),
     url(r'sellers/', include('sellers.urls', namespace='sellers')),
     url(r'management/', include('management.urls', namespace='management')),
+    url(r'payment/', include('payment.urls', namespace='payment')),
 ]
