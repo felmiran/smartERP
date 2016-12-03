@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Editar Condicion de Pago: {{ object.movement_code }} - {{ object.movement_name }}{% endblock %}</h2>
+
+{% block body %}
+{% include 'update_form.html' %}
+{% endblock %}

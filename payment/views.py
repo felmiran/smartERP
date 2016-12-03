@@ -92,3 +92,44 @@ class DeleteCreditCondition(DeleteView):
         except ProtectedError:
             messages.error(self.request, self.error_message)
             return redirect('payment:creditcondition_list')
+
+
+# inventory movement type
+class InventoryMovementTypeListView(ListView):
+    template_name = 'payment/inventorymovementtype_list.html'
+
+    def get_queryset(self):
+        return InventoryMovementType.objects.all()
+
+
+class CreateInventoryMovementType(SuccessMessageMixin, CreateView):
+    model = InventoryMovementType
+    form_class = InventoryMovementTypeForm
+    template_name_suffix = '_create_form'
+    success_message = "El tipo de movimiento de inventario ha sido creado con exito"
+
+
+class UpdateInventoryMovementType(UpdateView):
+    model = InventoryMovementType
+    form_class = InventoryMovementTypeUpdateForm
+    template_name_suffix = '_update_form'
+
+
+class DeleteInventoryMovementType(DeleteView):
+    model = InventoryMovementType
+    form_class = InventoryMovementTypeForm
+    success_url = reverse_lazy('payment:inventorymovementtype_list')
+    success_message = "El tipo de movimiento de inventario ha sido eliminado con exito"
+    error_message = "No es posible eliminar el tipo de movimiento de inventario. Esto puede deberse a que: " \
+                    "\n - El tipo de movimiento de inventario tiene ventas asociadas" \
+                    "\n - El tipo de movimiento de inventario tiene compras asociadas"
+
+    def delete(self, request, *args, **kwargs):
+        try:
+            a = super(DeleteInventoryMovementType, self).delete(request, *args, **kwargs)
+            messages.success(self.request, mark_safe(self.success_message))
+            return a
+
+        except ProtectedError:
+            messages.error(self.request, self.error_message)
+            return redirect('payment:inventorymovementtype_list')

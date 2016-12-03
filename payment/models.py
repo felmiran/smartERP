@@ -70,8 +70,12 @@ class InventoryMovementType(models.Model):
     )
     movement_code = models.CharField(max_length=10, verbose_name='Codigo', unique='True')
     movement_name = models.CharField(max_length=50, verbose_name='Nombre Tipo de Movimiento')
-    operation = models.PositiveSmallIntegerField(choices=OPERATION, verbose_name='Operacion')  # if 1, it adds to product supply. It subtracts if 0.
+    #OPERATION: if 1, it adds to product supply. It subtracts if 0, does nothing if 2
+    operation = models.PositiveSmallIntegerField(choices=OPERATION, verbose_name='Operacion')
     is_active = models.BooleanField(default=True, verbose_name='Activo')
+
+    def get_absolute_url(self):
+        return reverse('payment:inventorymovementtype_list')
 
     def __str__(self):
         return self.movement_code + ' - ' + self.movement_name
@@ -86,7 +90,7 @@ class SaleDocType(models.Model):
     ssii_code = models.PositiveSmallIntegerField(choices=DOCS_SII, verbose_name='Codigo SII')
     is_active = models.BooleanField(default=True, verbose_name='Activo')
     inv_movement_type = models.ForeignKey(InventoryMovementType, on_delete=models.CASCADE,
-                                          verbose_name='Tipo de Movimiento')
+                                          verbose_name='Tipo de Movimiento', null='True', blank='True')
 
     def __str__(self):
         return self.sdoc_code + ' - ' + self.sdoc_name

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Tipos de movimiento de inventario{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Movimiento de Inventario</th>
+                    <th>Nombre Movimiento de Inventario</th>
+                    <th>Operacion</th>
+                </tr>
+
+                    {% for invmovtype in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'payment:inventorymovementtype-update' invmovtype.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'payment:inventorymovementtype-delete' invmovtype.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ invmovtype.movement_code }}</td>
+                            <td>{{ invmovtype.movement_name }}</td>
+{#                          el get_FOO_display permite ver el readable name en vez del code del choice#}
+                            <td>{{ invmovtype.get_operation_display }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay tipos de movimiento de pago registrados </h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'payment:inventorymovementtype-add' %}" class="btn btn-success">Crear nuevo movimiento de inventario</a>
+    <br>
+    <br>
+
+{% endblock %}
