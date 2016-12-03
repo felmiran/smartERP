@@ -53,6 +53,9 @@ class CreditCondition(models.Model):
                                                    verbose_name='Cuotas')
     is_active = models.BooleanField(default=True, verbose_name='Activo')
 
+    def get_absolute_url(self):
+        return reverse('payment:creditcondition_list')
+
     def __str__(self):
         return self.cond_code + ' - ' + self.cond_name
 

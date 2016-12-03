@@ -51,3 +51,44 @@ class DeletePayform(DeleteView):
         except ProtectedError:
             messages.error(self.request, self.error_message)
             return redirect('payment:payform_list')
+
+
+# credit condition
+class CreditConditionListView(ListView):
+    template_name = 'payment/creditcondition_list.html'
+
+    def get_queryset(self):
+        return CreditCondition.objects.all()
+
+
+class CreateCreditCondition(SuccessMessageMixin, CreateView):
+    model = CreditCondition
+    form_class = CreditConditionForm
+    template_name_suffix = '_create_form'
+    success_message = "La condicion de pago ha sido creada con exito"
+
+
+class UpdateCreditCondition(UpdateView):
+    model = CreditCondition
+    form_class = CreditConditionUpdateForm
+    template_name_suffix = '_update_form'
+
+
+class DeleteCreditCondition(DeleteView):
+    model = CreditCondition
+    form_class = CreditConditionForm
+    success_url = reverse_lazy('payment:creditcondition_list')
+    success_message = "La condicion de pago ha sido eliminada con exito"
+    error_message = "No es posible eliminar la condicion de pago. Esto puede deberse a que: " \
+                    "\n - La forma de pago tiene ventas asociadas" \
+                    "\n - La forma de pago tiene compras asociadas"
+
+    def delete(self, request, *args, **kwargs):
+        try:
+            a = super(DeleteCreditCondition, self).delete(request, *args, **kwargs)
+            messages.success(self.request, mark_safe(self.success_message))
+            return a
+
+        except ProtectedError:
+            messages.error(self.request, self.error_message)
+            return redirect('payment:creditcondition_list')

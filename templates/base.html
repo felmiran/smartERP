@@ -309,13 +309,12 @@
                                 <ul id="conf-ventas" class="collapse">
                                     <li><a href="#">Tipos de documento</a></li>
                                     <li><a href="{% url 'payment:payform_list' %}">Formas de pago</a></li>
-                                    <li><a href="#">Condiciones de pago</a></li>
+                                    <li><a href="{% url 'payment:creditcondition_list' %}">Condiciones de pago</a></li>
                                     <li><a href="{% url 'sellers:seller_list' %}">Vendedores</a></li>
                                 </ul>
                                 <a href="#conf-compras" data-toggle="collapse"> <em>Compras</em><i class="fa fa-fw fa-caret-right"></i></a>
                                 <ul id="conf-compras" class="collapse">
                                     <li><a href="#">Tipos de documento</a></li>
-                                    <li><a href="{% url 'payment:payform_list' %}">Formas de pago</a></li>
                                     <li><a href="#">Condiciones de pago</a></li>
                                 </ul>
                                 <a href="#conf-inv" data-toggle="collapse"> <em>Inventario</em><i class="fa fa-fw fa-caret-right"></i></a>

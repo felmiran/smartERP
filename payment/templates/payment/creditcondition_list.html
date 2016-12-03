@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Condiciones de Pago{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Condicion de Pago</th>
+                    <th>Nombre Condicion de Pago</th>
+                </tr>
+
+                    {% for creditcondition in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'payment:creditcondition-update' creditcondition.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'payment:creditcondition-delete' creditcondition.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ creditcondition.cond_code }}</td>
+                            <td>{{ creditcondition.cond_name }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay condiciones de pago registradas</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'payment:creditcondition-add' %}" class="btn btn-success">Crear condicion de pago</a>
+    <br>
+    <br>
+
+{% endblock %}

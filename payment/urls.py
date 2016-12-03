@@ -10,4 +10,9 @@ urlpatterns = [
     url(r'^payform/(?P<pk>[0-9]+)/update/$', views.UpdatePayform.as_view(), name='payform-update'),
     url(r'^payform/(?P<pk>[0-9]+)/delete/$', views.DeletePayform.as_view(), name='payform-delete'),
 
+    # payment
+    url(r'^credit_cond/$', views.CreditConditionListView.as_view(), name='creditcondition_list'),
+    url(r'^credit_cond/add/$', views.CreateCreditCondition.as_view(), name='creditcondition-add'),
+    url(r'^credit_cond/(?P<pk>[0-9]+)/update/$', views.UpdateCreditCondition.as_view(), name='creditcondition-update'),
+    url(r'^credit_cond/(?P<pk>[0-9]+)/delete/$', views.DeleteCreditCondition.as_view(), name='creditcondition-delete'),
 ]
