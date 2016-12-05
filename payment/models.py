@@ -124,6 +124,9 @@ class Tax(models.Model):
                       MinValueValidator(0, message="Por favor ingrese un numero entre 0 y 100")]
     tax_value = models.PositiveSmallIntegerField(validators=DEC_VALIDATORS, verbose_name='Monto')
 
+    def get_absolute_url(self):
+        return reverse('payment:tax_list')
+
     def __str__(self):
         return self.tax_code + ' - ' + self.tax_name
 

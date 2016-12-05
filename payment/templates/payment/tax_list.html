@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Impuestos{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Impuesto</th>
+                    <th>Nombre Impuesto</th>
+                    <th>Valor Impuesto</th>
+                </tr>
+
+                    {% for tax in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'payment:tax-update' tax.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'payment:tax-delete' tax.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ tax.tax_code }}</td>
+                            <td>{{ tax.tax_name }}</td>
+                            <td>{{ tax.tax_value }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay impuestos registrados</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'payment:tax-add' %}" class="btn btn-success">Crear nuevo impuesto</a>
+    <br>
+    <br>
+
+{% endblock %}

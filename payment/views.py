@@ -179,3 +179,40 @@ class DeleteSaleDocType(DeleteView):
 
 
 # tax
+class TaxListView(ListView):
+    template_name = 'payment/tax_list.html'
+
+    def get_queryset(self):
+        return Tax.objects.all()
+
+
+class CreateTax(SuccessMessageMixin, CreateView):
+    model = Tax
+    form_class = TaxForm
+    template_name_suffix = '_create_form'
+    success_message = "El tipo impuesto ha sido creado con exito"
+
+
+class UpdateTax(UpdateView):
+    model = Tax
+    form_class = TaxUpdateForm
+    template_name_suffix = '_update_form'
+
+
+class DeleteTax(DeleteView):
+    model = Tax
+    form_class = TaxForm
+    success_url = reverse_lazy('payment:tax_list')
+    success_message = "El tipo de impuesto ha sido creado con exito"
+    error_message = "No es posible eliminar el tipo de impuesto. Esto puede deberse a que: " \
+                    "\n - El tipo de impuesto tiene ventas asociadas"
+
+    def delete(self, request, *args, **kwargs):
+        try:
+            a = super(DeleteTax, self).delete(request, *args, **kwargs)
+            messages.success(self.request, mark_safe(self.success_message))
+            return a
+
+        except ProtectedError:
+            messages.error(self.request, self.error_message)
+            return redirect('payment:tax_list')

@@ -35,9 +35,9 @@ urlpatterns = [
     # url(r'^purchasedoctype/(?P<pk>[0-9]+)/delete/$', views.DeletePurchaseDocType.as_view(), name='purchasedoctype-delete'),
 
     # tax
-    # url(r'^tax/$', views.TaxListView.as_view(), name='tax_list'),
-    # url(r'^tax/add/$', views.CreateTax.as_view(), name='tax-add'),
-    # url(r'^tax/(?P<pk>[0-9]+)/update/$', views.UpdateTax.as_view(), name='tax-update'),
-    # url(r'^tax/(?P<pk>[0-9]+)/delete/$', views.DeleteTax.as_view(), name='tax-delete'),
+    url(r'^tax/$', views.TaxListView.as_view(), name='tax_list'),
+    url(r'^tax/add/$', views.CreateTax.as_view(), name='tax-add'),
+    url(r'^tax/(?P<pk>[0-9]+)/update/$', views.UpdateTax.as_view(), name='tax-update'),
+    url(r'^tax/(?P<pk>[0-9]+)/delete/$', views.DeleteTax.as_view(), name='tax-delete'),
 
 ]
