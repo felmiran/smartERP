@@ -92,6 +92,9 @@ class SaleDocType(models.Model):
     inv_movement_type = models.ForeignKey(InventoryMovementType, on_delete=models.CASCADE,
                                           verbose_name='Tipo de Movimiento', null='True', blank='True')
 
+    def get_absolute_url(self):
+        return reverse('payment:saledoctype_list')
+
     def __str__(self):
         return self.sdoc_code + ' - ' + self.sdoc_name
 

@@ -133,3 +133,49 @@ class DeleteInventoryMovementType(DeleteView):
         except ProtectedError:
             messages.error(self.request, self.error_message)
             return redirect('payment:inventorymovementtype_list')
+
+
+# sale doc type
+class SaleDocTypeListView(ListView):
+    template_name = 'payment/saledoctype_list.html'
+
+    def get_queryset(self):
+        return SaleDocType.objects.all()
+
+
+class CreateSaleDocType(SuccessMessageMixin, CreateView):
+    model = SaleDocType
+    form_class = SaleDocTypeForm
+    template_name_suffix = '_create_form'
+    success_message = "El tipo de documento de ventas ha sido creado con exito"
+
+
+class UpdateSaleDocType(UpdateView):
+    model = SaleDocType
+    form_class = SaleDocTypeUpdateForm
+    template_name_suffix = '_update_form'
+
+
+class DeleteSaleDocType(DeleteView):
+    model = SaleDocType
+    form_class = SaleDocTypeForm
+    success_url = reverse_lazy('payment:saledoctype_list')
+    success_message = "El tipo de documento de ventas ha sido creado con exito"
+    error_message = "No es posible eliminar el tipo de documento de ventas. Esto puede deberse a que: " \
+                    "\n - El tipo de documento tiene ventas asociadas"
+
+    def delete(self, request, *args, **kwargs):
+        try:
+            a = super(DeleteSaleDocType, self).delete(request, *args, **kwargs)
+            messages.success(self.request, mark_safe(self.success_message))
+            return a
+
+        except ProtectedError:
+            messages.error(self.request, self.error_message)
+            return redirect('payment:saledoctype_list')
+
+
+# purchase doc type
+
+
+# tax

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Tipos de Documento de Ventas{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Codigo Documento de Ventas</th>
+                    <th>Nombre Documento de Ventas</th>
+                    <th>Codigo SII</th>
+                    <th>Tipo de movimiento de inventario</th>
+                </tr>
+
+                    {% for saledoctype in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'payment:saledoctype-update' saledoctype.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'payment:saledoctype-delete' saledoctype.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ saledoctype.sdoc_code }}</td>
+                            <td>{{ saledoctype.sdoc_name }}</td>
+                            <td>{{ saledoctype.ssii_code }}</td>
+                            <td>{{ saledoctype.inv_movement_type }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay tipos de movimiento de ventas registrados</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'payment:saledoctype-add' %}" class="btn btn-success">Crear Tipo de Documento de Ventas</a>
+    <br>
+    <br>
+
+{% endblock %}

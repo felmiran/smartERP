@@ -307,7 +307,7 @@
                             <li>
                                 <a href="#conf-ventas" data-toggle="collapse"> <em>Ventas</em><i class="fa fa-fw fa-caret-right"></i></a>
                                 <ul id="conf-ventas" class="collapse">
-                                    <li><a href="#">Tipos de documento</a></li>
+                                    <li><a href="{% url 'payment:saledoctype_list' %}">Tipos de documento</a></li>
                                     <li><a href="{% url 'payment:payform_list' %}">Formas de pago</a></li>
                                     <li><a href="{% url 'payment:creditcondition_list' %}">Condiciones de pago</a></li>
                                     <li><a href="{% url 'sellers:seller_list' %}">Vendedores</a></li>
