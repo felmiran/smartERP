@@ -2,12 +2,13 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from mptt.models import MPTTModel, TreeForeignKey
 
 from management.models import Warehouse
 
 
-# Create your models here.
-class Category(models.Model):
+class Category(MPTTModel):
+    parent = TreeForeignKey('self', blank=True, null=True, related_name='children')
     code = models.CharField(max_length=10, unique=True)
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, blank=True)
@@ -16,48 +17,31 @@ class Category(models.Model):
     def __str__(self):
         return self.code + ' - ' + self.name
 
-    class Meta:
-        ordering = ['code']
+    # class Meta:
+    #     ordering = ['code']
 
 
-class SubCategory(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.PROTECT)
-    # este code tiene que ser la concatenacion del code de la categoria y subcategoria. eso se ve en el form
-    code = models.CharField(max_length=10)
-    name = models.CharField(max_length=50)
-    description = models.TextField(max_length=200, blank=True)
-    date_created = models.DateTimeField(default=timezone.now)
+# class SubCategory(models.Model):
+#     category = models.ForeignKey(Category, on_delete=models.PROTECT)
+#     # este code tiene que ser la concatenacion del code de la categoria y subcategoria. eso se ve en el form
+#     code = models.CharField(max_length=10)
+#     name = models.CharField(max_length=50)
+#     description = models.TextField(max_length=200, blank=True)
+#     date_created = models.DateTimeField(default=timezone.now)
+#
+#     class Meta:
+#         ordering = ['code']
+#
+#     def __str__(self):
+#         return self.code + ' - ' + self.name
 
-    class Meta:
-        ordering = ['code']
 
-    def __str__(self):
-        return self.code + ' - ' + self.name
-
-
-class Product(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.PROTECT)
-    subcategory = models.ForeignKey(SubCategory, on_delete=models.PROTECT)
-    # este code tiene que ser la concatenacion del code de la subcategoria y el producto. eso se ve en el form
-    code = models.CharField(max_length=10)
-    name = models.CharField(max_length=50)
-    description = models.TextField(max_length=200, blank=True)
-    date_created = models.DateTimeField(auto_now_add=True)
-
-    # quizas no es necesario. este dato esta almacenado en el model ProductMovement
-    updated_unit_cost = models.DecimalField(max_digits=10, decimal_places=2)
-    # quizas no es necesario. este dato esta almacenado en el model ProductMovement
-    updated_stock = models.DecimalField(max_digits=8, decimal_places=2)
-    # quizas no es necesario. este dato esta almacenado en el model ProductMovement
-    updated_stock_date = models.DateTimeField(auto_now_add=True)
-    is_active = models.BooleanField(default=True)
-
-    class Meta:
-        ordering = ['code']
-
-    def __str__(self):
-        return self.code + ' - ' + self.name
-
+# class ProductClass(models.Model):
+#     code = models.CharField(max_length=10)
+#     name = models.CharField(max_length=30)
+#     description = models.TextField(max_length=200, blank=True)
+#     attributes = models.ForeignKey(ProductClassAttribute, on_delete=models.PROTECT)
+#     date_created = models.DateTimeField(default=timezone.now)
 
 class Attribute(models.Model):
     name = models.CharField(max_length=50)
@@ -71,20 +55,46 @@ class Attribute(models.Model):
         ordering = ['name']
 
 
-class AttributeOption(models.Model):
-    attribute = models.ForeignKey(Attribute, on_delete=models.CASCADE)
-    option_name = models.CharField(max_length=10)
+class Product(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
+    # subcategory = models.ForeignKey(SubCategory, on_delete=models.PROTECT)
+    # este code tiene que ser la concatenacion del code de las categorias que lo anteceden. eso se ve en el form
+    code = models.CharField(max_length=10)
+    name = models.CharField(max_length=50)
+    attributes = models.ManyToManyField(Attribute, through='ProductAttributeValue')
+    description = models.TextField(max_length=200, blank=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    # quizas no es necesario. este dato esta almacenado en el model ProductMovement
+    updated_unit_cost = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    # quizas no es necesario. este dato esta almacenado en el model ProductMovement
+    updated_stock = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
+    # quizas no es necesario. este dato esta almacenado en el model ProductMovement
+    updated_stock_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
-        unique_together = ('attribute', 'option_name')
+        ordering = ['code']
 
     def __str__(self):
-        return self.option_name
+        return self.code + ' - ' + self.name
 
 
-class ProductAttribute(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+class AttributeValue(models.Model):
     attribute = models.ForeignKey(Attribute, on_delete=models.CASCADE)
+    attribute_value = models.CharField(max_length=10)
+
+    class Meta:
+        unique_together = ('attribute', 'attribute_value')
+
+    def __str__(self):
+        return str(self.attribute.name) + ' - ' + str(self.attribute_value)
+
+
+class ProductAttributeValue(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    attribute = models.ForeignKey(Attribute, on_delete=models.PROTECT)
+    attribute_value = models.ForeignKey(AttributeValue, on_delete=models.PROTECT)
     is_active = models.BooleanField(default=True)
 
 
