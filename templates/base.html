@@ -23,6 +23,10 @@
     <!-- Custom Fonts -->
     <link href="http://127.0.0.1:8000/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+
+    <!-- jquery -->
+
+
     <style>
 
     .errorlist{
@@ -84,6 +88,8 @@
    .fa-times-circle:hover {
         color: #122b40;
     }
+
+
 
     </style>
 
@@ -403,6 +409,17 @@
 
     <!-- jQuery -->
     <script src="http://127.0.0.1:8000/static/js/jquery.js"></script>
+
+    <!-- jQuery formset-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script type="text/javascript">
+    $('.formset_row').formset({
+        addText: 'Agregar Fila',
+        deleteText: 'Eliminar',
+        prefix: 'attributevalue_set'
+    });
+</script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="http://127.0.0.1:8000/static/js/bootstrap.min.js"></script>

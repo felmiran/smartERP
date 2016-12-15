@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 from mptt.models import MPTTModel, TreeForeignKey
+from django.core.urlresolvers import reverse
 
 from management.models import Warehouse
 
@@ -47,6 +48,9 @@ class Attribute(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, blank=True)
     is_active = models.BooleanField(default=True)
+
+    def get_abrolute_url(self):
+        return reverse('inventory:attribute_list')
 
     def __str__(self):
         return self.name
