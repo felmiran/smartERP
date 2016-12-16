@@ -160,7 +160,7 @@ class DeleteSaleDocType(DeleteView):
     model = SaleDocType
     form_class = SaleDocTypeForm
     success_url = reverse_lazy('payment:saledoctype_list')
-    success_message = "El tipo de documento de ventas ha sido creado con exito"
+    success_message = "El tipo de documento de ventas ha sido eliminado con exito"
     error_message = "No es posible eliminar el tipo de documento de ventas. Esto puede deberse a que: " \
                     "\n - El tipo de documento tiene ventas asociadas"
 
@@ -203,7 +203,7 @@ class DeleteTax(DeleteView):
     model = Tax
     form_class = TaxForm
     success_url = reverse_lazy('payment:tax_list')
-    success_message = "El tipo de impuesto ha sido creado con exito"
+    success_message = "El tipo de impuesto ha sido eliminado con exito"
     error_message = "No es posible eliminar el tipo de impuesto. Esto puede deberse a que: " \
                     "\n - El tipo de impuesto tiene ventas asociadas"
 

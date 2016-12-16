@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<h2>{% block title %}Atributos{% endblock %}</h2>
+
+{% block body %}
+
+    {% include 'form-message.html' %}
+
+    <table>
+            {% if object_list %}
+                <tr>
+                    <th></th>
+                    <th>Nombre Atributo</th>
+                </tr>
+
+                    {% for attribute in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'inventory:attribute-update' attribute.pk %}"><i class="fa fa-pencil-square-o" title="Editar"></i></a>&nbsp;
+                                <a href="{% url 'inventory:attribute-delete' attribute.pk %}"><i class="fa fa-times-circle" title="Eliminar"></i></a>
+                            </td>
+                            <td>{{ attribute.name }}</td>
+                        </tr>
+
+                    {% endfor %}
+            {% else %}
+                <h3>No hay atributos</h3>
+            {% endif %}
+    </table>
+    <br>
+    <br>
+    <a href="{% url 'inventory:attribute-add' %}" class="btn btn-success">Crear atributo</a>
+    <br>
+    <br>
+
+{% endblock %}

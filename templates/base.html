@@ -89,7 +89,10 @@
         color: #122b40;
     }
 
-
+    table a:not(.btn), .table a:not(.btn) {
+        color: #122b40;
+        text-decoration: underline;
+    }
 
     </style>
 
@@ -326,6 +329,7 @@
                                 </ul>
                                 <a href="#conf-inv" data-toggle="collapse"> <em>Inventario</em><i class="fa fa-fw fa-caret-right"></i></a>
                                 <ul id="conf-inv" class="collapse">
+                                    <li><a href="{% url 'inventory:attribute_list' %}">Atributos</a></li>
                                     <li><a href="{% url 'payment:inventorymovementtype_list' %}">Tipos de movimiento</a></li>
                                     <li><a href="#">Motivos de movimiento</a></li>
 
@@ -413,11 +417,13 @@
     <!-- jQuery formset-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
     <script type="text/javascript">
-    $('.formset_row').formset({
-        addText: 'Agregar Fila',
-        deleteText: 'Eliminar',
-        prefix: 'attributevalue_set'
-    });
+    $('.formset_row')
+            .formset({
+                 addText: 'Agregar Fila',
+                 deleteText: 'Eliminar',
+                 prefix: 'attributevalue_set'
+
+            });
 </script>
 
 

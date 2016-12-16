@@ -1,7 +1,7 @@
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Attribute, AttributeValue, Product
-from .forms import AttributeValueForm, AttributeValueFormSet
+from .forms import AttributeValueForm, AttributeValueFormSet, AttributeForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.contrib.messages.views import SuccessMessageMixin
@@ -22,10 +22,10 @@ class AttributeListView(ListView):
 
 class CreateAttribute(CreateView):
     model = Attribute
-    # fields = '__all__'
-    fields = ['name', ]
+    fields = '__all__'
     template_name_suffix = '_create_form'
     success_message = "El atributo ha sido creado con exito"
+    success_url = reverse_lazy('inventory:attribute_list')
 
     def get_context_data(self, **kwargs):
         data = super(CreateAttribute, self).get_context_data(**kwargs)
@@ -52,6 +52,21 @@ class UpdateAttribute(UpdateView):
 
 
 class DeleteAttribute(DeleteView):
-    pass
+    model = Attribute
+    form_class = AttributeForm
+    success_url = reverse_lazy('inventory:attribute_list')
+    success_message = "El atributo ha sido eliminado con exito"
+    error_message = "No es posible eliminar atributo. Esto puede deberse a que: " \
+                    "\n - El atributo esta asociado a un producto"
+
+    def delete(self, request, *args, **kwargs):
+        try:
+            a = super(DeleteAttribute, self).delete(request, *args, **kwargs)
+            messages.success(self.request, mark_safe(self.success_message))
+            return a
+
+        except ProtectedError:
+            messages.error(self.request, self.error_message)
+            return redirect('inventory:attribute_list')
 
 

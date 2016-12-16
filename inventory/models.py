@@ -12,7 +12,7 @@ class Category(MPTTModel):
     parent = TreeForeignKey('self', blank=True, null=True, related_name='children')
     code = models.CharField(max_length=10, unique=True)
     name = models.CharField(max_length=50)
-    description = models.TextField(max_length=200, blank=True)
+    description = models.CharField(max_length=200, blank=True)
     date_created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -46,7 +46,7 @@ class Category(MPTTModel):
 
 class Attribute(models.Model):
     name = models.CharField(max_length=50)
-    description = models.TextField(max_length=200, blank=True)
+    description = models.CharField(max_length=200, blank=True)
     is_active = models.BooleanField(default=True)
 
     def get_abrolute_url(self):
@@ -66,7 +66,7 @@ class Product(models.Model):
     code = models.CharField(max_length=10)
     name = models.CharField(max_length=50)
     attributes = models.ManyToManyField(Attribute, through='ProductAttributeValue')
-    description = models.TextField(max_length=200, blank=True)
+    description = models.CharField(max_length=200, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
 
     # quizas no es necesario. este dato esta almacenado en el model ProductMovement
@@ -87,6 +87,9 @@ class Product(models.Model):
 class AttributeValue(models.Model):
     attribute = models.ForeignKey(Attribute, on_delete=models.CASCADE)
     attribute_value = models.CharField(max_length=10)
+
+    def get_abrolute_url(self):
+        return reverse('inventory:attribute_list')
 
     class Meta:
         unique_together = ('attribute', 'attribute_value')
