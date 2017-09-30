@@ -65,7 +65,6 @@ class Product(models.Model):
     # este code tiene que ser la concatenacion del code de las categorias que lo anteceden. eso se ve en el form
     code = models.CharField(max_length=10)
     name = models.CharField(max_length=50)
-    attributes = models.ManyToManyField(Attribute, through='ProductAttributeValue')
     description = models.CharField(max_length=200, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
 
